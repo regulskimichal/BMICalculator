@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--Custom-->
+    <dimen name="margin">8dp</dimen>
+    <dimen name="main_text_size">18sp</dimen>
+    <dimen name="bmi_text_size">32sp</dimen>
+    <dimen name="unit_TV_width">24sp</dimen>
+    <dimen name="match_parent">0dp</dimen>
+</resources>
