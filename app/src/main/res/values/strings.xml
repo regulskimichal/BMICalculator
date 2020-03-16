@@ -1,30 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BMI Calculator</string>
     <string name="about">About</string>
-    <string name="calc_BMI">Calculate my BMI</string>
-    <string name="height_hint">Input height</string>
-    <string name="weight_hint">Input weight</string>
-    <string name="label_switch">Switch metric to imperial units</string>
+    <string name="label_switch">Imperial units</string>
+    <string name="weight_hint">Weight</string>
+    <string name="height_hint">Height</string>
     <string name="metric_weight_unit">kg</string>
     <string name="metric_height_unit">cm</string>
-    <string name="imperial_height_unit">in</string>
     <string name="imperial_weight_unit">lb</string>
+    <string name="imperial_height_unit">in</string>
     <string name="bmi_message">Your BMI:</string>
     <string name="invalid_weight">Invalid weight</string>
     <string name="invalid_height">Invalid height</string>
-    <string name="underweight">Underweight</string>
-    <string name="normal_range">Normal range</string>
+    <string name="obesity">Obesity</string>
     <string name="overweight">Overweight</string>
-    <string name="obese">Obese</string>
-    <string name="title_activity_about">About</string>
-    <string name="share">Share</string>
-    <string name="my_bmi">My BMI is</string>
-    <string name="i_am">I am</string>
-    <string name="sent_via_bmi_calc">Sent via BMI Calculator</string>
-    <string name="save">Save preferences</string>
-    <string name="clear">Clear preferences</string>
-    <string name="cleared">Preferences have been cleared</string>
-    <string name="saved">Preferences have been saved</string>
+    <string name="normal_range">Normal range</string>
+    <string name="underweight">Underweight</string>
     <string name="about_me">Hello,\nMy name is Michał. I\'m Computer Science student of Wrocław University of Science and Technology. My hobby is chemistry and math. I\'m really into cutting edge technologies and Java programming. I hope you\'ll enjoy my first android app :) If you have any questions, you can email me tapping pink button on the bottom of this page.</string>
     <string name="photo">Photo</string>
+    <string name="email_subject">Question from BMI Calculator</string>
 </resources>

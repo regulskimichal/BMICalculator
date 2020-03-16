@@ -1,31 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BMI Calculator</string>
-    <string name="bmi_message">Twoje BMI:</string>
-    <string name="calc_BMI">Oblicz BMI</string>
+    <string name="app_name">Kalkulator BMI</string>
+    <string name="about">O aplikacji</string>
+    <string name="label_switch">Jednostki imperialne</string>
+    <string name="weight_hint">Waga</string>
     <string name="height_hint">Wzrost</string>
-    <string name="imperial_height_unit">in</string>
+    <string name="metric_weight_unit">kg</string>
+    <string name="metric_height_unit">cm</string>
     <string name="imperial_weight_unit">lb</string>
+    <string name="imperial_height_unit">in</string>
+    <string name="bmi_message">Twoje BMI:</string>
     <string name="invalid_height">Nieprawidłowy wzrost</string>
     <string name="invalid_weight">Nieprawidłowa waga</string>
-    <string name="label_switch">Zamień jednostki metryczne na imperialne</string>
-    <string name="weight_hint">Waga</string>
-    <string name="metric_height_unit">cm</string>
-    <string name="metric_weight_unit">kg</string>
-    <string name="normal_range">Norma</string>
-    <string name="obese">Otyłość</string>
+    <string name="obesity">Otyłość</string>
     <string name="overweight">Nadwaga</string>
+    <string name="normal_range">W normie</string>
     <string name="underweight">Niedowaga</string>
-    <string name="about">O aplikacji</string>
-    <string name="title_activity_about">O aplikacji</string>
-    <string name="share">Udostępnij</string>
-    <string name="my_bmi">Moje BMI wynosi</string>
-    <string name="i_am">Jestem</string>
-    <string name="sent_via_bmi_calc">Wysłano przy pomocy BMI Calculator</string>
-    <string name="clear">Wyczyść ustawienia</string>
-    <string name="cleared">Wyczyszczono ustawienia</string>
-    <string name="save">Zapisz ustawienia</string>
-    <string name="saved">Zapisano ustawienia</string>
     <string name="about_me">Cześć,\nNazywam się Michał. Studiuję informatykę na Politechnice Wrocławskiej. Moje hobby to chemia i matematyka. Interesuję się nowymi technologiami oraz programowaniem w Javie. Mam nadzieję, że spodoba Ci się moja pierwsza aplikacja na Androida :) Jeżeli masz jakieś pytania, możesz mi wysłać emaila, naciskając różowy przycisk na dole tej strony.</string>
     <string name="photo">Zdjęcie</string>
+    <string name="email_subject">Pytanie na temat Kalkulatora BMI</string>
 </resources>

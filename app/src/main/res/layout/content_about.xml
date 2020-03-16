@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/margin"
-    tools:context=".About"
+    tools:context=".ui.About"
     tools:showIn="@layout/activity_about"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/margin"
-    tools:context=".MainActivity"
+    tools:context=".ui.MainActivity"
     tools:showIn="@layout/activity_main"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -57,7 +57,7 @@
         app:layout_constraintStart_toEndOf="@+id/height_ET" />
 
     <Switch
-        android:id="@+id/metric_imperial_S"
+        android:id="@+id/bmi_calculator_type_switch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin"
