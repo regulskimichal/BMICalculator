@@ -1,4 +1,4 @@
-package pl.michalregulski.bmicalculator.domain
+package pl.michalregulski.bmicalculator.model
 
 abstract class BMICalculator(
     private val minWeight: Double,
@@ -22,16 +22,9 @@ abstract class BMICalculator(
         private val metricBMICalculator = MetricBMICalculator()
         private val imperialBMICalculator = ImperialBMICalculator()
 
-        fun get(bmiCalculatorType: BMICalculatorType) = when(bmiCalculatorType) {
+        fun get(bmiCalculatorType: BMICalculatorType) = when (bmiCalculatorType) {
             BMICalculatorType.METRIC -> metricBMICalculator
             BMICalculatorType.IMPERIAL -> imperialBMICalculator
-        }
-
-        fun getDescription(bmi: Double): BMIStatus = when {
-            bmi > 30 -> BMIStatus.OBESITY
-            bmi > 25 -> BMIStatus.OVERWEIGHT
-            bmi > 18.5 -> BMIStatus.NORMAL
-            else -> BMIStatus.UNDERWEIGHT
         }
     }
 

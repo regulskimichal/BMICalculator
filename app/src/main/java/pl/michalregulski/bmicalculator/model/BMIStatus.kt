@@ -1,4 +1,4 @@
-package pl.michalregulski.bmicalculator.domain
+package pl.michalregulski.bmicalculator.model
 
 import pl.michalregulski.bmicalculator.R
 

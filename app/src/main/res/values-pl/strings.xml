@@ -19,4 +19,5 @@
     <string name="about_me">Cześć,\nNazywam się Michał. Studiuję informatykę na Politechnice Wrocławskiej. Moje hobby to chemia i matematyka. Interesuję się nowymi technologiami oraz programowaniem w Javie. Mam nadzieję, że spodoba Ci się moja pierwsza aplikacja na Androida :) Jeżeli masz jakieś pytania, możesz mi wysłać emaila, naciskając różowy przycisk na dole tej strony.</string>
     <string name="photo">Zdjęcie</string>
     <string name="email_subject">Pytanie na temat Kalkulatora BMI</string>
+    <string name="empty"/>
 </resources>

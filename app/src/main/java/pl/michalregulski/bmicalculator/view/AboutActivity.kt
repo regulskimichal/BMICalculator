@@ -1,4 +1,4 @@
-package pl.michalregulski.bmicalculator.ui
+package pl.michalregulski.bmicalculator.view
 
 import android.content.Intent
 import android.net.Uri
@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_about.*
 import pl.michalregulski.bmicalculator.R
 
-class About : AppCompatActivity() {
+class AboutActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,20 +18,10 @@ class About : AppCompatActivity() {
     }
 
     private fun onClickFab() {
-        val mail = Intent(
-            Intent.ACTION_SENDTO, Uri.fromParts(
-                "mailto",
-                EMAIL_ADDRESS, null
-            )
-        )
-            .putExtra(
-                Intent.EXTRA_EMAIL,
-                EMAIL_ADDRESS
-            )
-            .putExtra(
-                Intent.EXTRA_SUBJECT,
-                getString(R.string.email_subject)
-            )
+        val mail = Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", EMAIL_ADDRESS, null))
+            .putExtra(Intent.EXTRA_EMAIL, EMAIL_ADDRESS)
+            .putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_subject))
+
         startActivity(mail)
     }
 

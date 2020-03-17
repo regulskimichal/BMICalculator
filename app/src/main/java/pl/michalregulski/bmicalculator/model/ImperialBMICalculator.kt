@@ -1,4 +1,4 @@
-package pl.michalregulski.bmicalculator.domain
+package pl.michalregulski.bmicalculator.model
 
 class ImperialBMICalculator : BMICalculator(MIN_WEIGHT, MAX_WEIGHT, MIN_HEIGHT, MAX_HEIGHT) {
 
