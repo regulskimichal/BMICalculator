@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
-
-    <!--Custom-->
+    <dimen name="fabMargin">16dp</dimen>
     <dimen name="margin">8dp</dimen>
-    <dimen name="main_text_size">18sp</dimen>
-    <dimen name="bmi_text_size">32sp</dimen>
-    <dimen name="unit_TV_width">24sp</dimen>
-    <dimen name="large_margin">16dp</dimen>
+    <dimen name="largeMargin">16dp</dimen>
+    <dimen name="mainTextSize">18sp</dimen>
+    <dimen name="bmiTextSize">32sp</dimen>
+    <dimen name="unitWidth">24sp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>

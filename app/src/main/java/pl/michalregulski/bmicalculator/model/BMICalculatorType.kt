@@ -7,7 +7,7 @@ enum class BMICalculatorType(
     val heightDescriptionId: Int
 ) {
 
-    IMPERIAL(R.string.imperial_weight_unit, R.string.imperial_height_unit),
-    METRIC(R.string.metric_weight_unit, R.string.metric_height_unit)
+    IMPERIAL(R.string.imperialWeightUnit, R.string.imperialHeightUnit),
+    METRIC(R.string.metricWeightUnit, R.string.metricHeightUnit)
 
 }

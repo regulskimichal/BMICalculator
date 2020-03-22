@@ -21,4 +21,8 @@ class Application : Application() {
         }
     }
 
+    companion object {
+        const val bmiStatusKey = "BMI"
+    }
+
 }

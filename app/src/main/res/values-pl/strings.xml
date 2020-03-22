@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Kalkulator BMI</string>
+    <string name="appName">Kalkulator BMI</string>
     <string name="about">O aplikacji</string>
-    <string name="label_switch">Jednostki imperialne</string>
-    <string name="weight_hint">Waga</string>
-    <string name="height_hint">Wzrost</string>
-    <string name="metric_weight_unit">kg</string>
-    <string name="metric_height_unit">cm</string>
-    <string name="imperial_weight_unit">lb</string>
-    <string name="imperial_height_unit">in</string>
-    <string name="bmi_message">Twoje BMI:</string>
-    <string name="invalid_height">Nieprawidłowy wzrost</string>
-    <string name="invalid_weight">Nieprawidłowa waga</string>
+    <string name="imperialUnits">Jed. imperialne</string>
+    <string name="metricUnits">Jed. metryczne</string>
+    <string name="weightHint">Waga</string>
+    <string name="heightHint">Wzrost</string>
+    <string name="metricWeightUnit">kg</string>
+    <string name="metricHeightUnit">cm</string>
+    <string name="imperialWeightUnit">lb</string>
+    <string name="imperialHeightUnit">in</string>
+    <string name="bmiMessage">Twoje BMI:</string>
+    <string name="invalidHeight">Nieprawidłowy wzrost</string>
+    <string name="invalidWeight">Nieprawidłowa waga</string>
     <string name="obesity">Otyłość</string>
     <string name="overweight">Nadwaga</string>
-    <string name="normal_range">W normie</string>
+    <string name="normalRange">W normie</string>
     <string name="underweight">Niedowaga</string>
-    <string name="about_me">Cześć,\nNazywam się Michał. Studiuję informatykę na Politechnice Wrocławskiej. Moje hobby to chemia i matematyka. Interesuję się nowymi technologiami oraz programowaniem w Javie. Mam nadzieję, że spodoba Ci się moja pierwsza aplikacja na Androida :) Jeżeli masz jakieś pytania, możesz mi wysłać emaila, naciskając różowy przycisk na dole tej strony.</string>
+    <string name="aboutMe">Cześć,\nNazywam się Michał Regulski i jestem autorem tej aplikacji. Studiuję Informatykę na Politechnice Wrocławskiej. W kręgu moich zainteresowań jest programowanie aplikacji backendowych przy pomocy Spring Framework, Kotlina i bibliotek do programowania reaktywnego. Jeżeli masz jakieś pytania, możesz mi wysłać emaila, naciskając przycisk poniżej.</string>
     <string name="photo">Zdjęcie</string>
-    <string name="email_subject">Pytanie na temat Kalkulatora BMI</string>
-    <string name="empty"/>
+    <string name="emailSubject">Pytanie na temat Kalkulatora BMI</string>
 </resources>

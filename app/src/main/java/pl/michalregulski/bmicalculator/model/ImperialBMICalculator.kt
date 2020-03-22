@@ -2,7 +2,8 @@ package pl.michalregulski.bmicalculator.model
 
 class ImperialBMICalculator : BMICalculator(MIN_WEIGHT, MAX_WEIGHT, MIN_HEIGHT, MAX_HEIGHT) {
 
-    override fun calculateBMIInternal(weight: Double, height: Double) = weight * 703 / (height * height)
+    override fun calculateBMIInternal(weight: Double, height: Double) =
+        weight * 703 / (height * height)
 
     companion object {
         private const val MIN_WEIGHT = 20.0

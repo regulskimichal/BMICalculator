@@ -20,7 +20,7 @@ class AboutActivity : AppCompatActivity() {
     private fun onClickFab() {
         val mail = Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", EMAIL_ADDRESS, null))
             .putExtra(Intent.EXTRA_EMAIL, EMAIL_ADDRESS)
-            .putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_subject))
+            .putExtra(Intent.EXTRA_SUBJECT, getString(R.string.emailSubject))
 
         startActivity(mail)
     }

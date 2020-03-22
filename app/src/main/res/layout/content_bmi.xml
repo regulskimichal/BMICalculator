@@ -1,138 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
-        <import type="android.view.View"/>
+        <import type="android.view.View" />
 
         <variable
             name="viewModel"
-            type="pl.michalregulski.bmicalculator.viewmodel.BMIViewModel"/>
+            type="pl.michalregulski.bmicalculator.viewmodel.BMIViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bmiContentCL"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context=".view.BMIActivity"
-        tools:showIn="@layout/activity_bmi"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        tools:showIn="@layout/activity_bmi">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/weight_TIL"
+            android:id="@+id/weightTIL"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
-            app:layout_constraintEnd_toStartOf="@+id/weight_unit_TV"
+            app:layout_constraintEnd_toStartOf="@+id/weightUnitTV"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <EditText
-                android:id="@+id/weight_ET"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/weightET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/weight_hint"
+                android:hint="@string/weightHint"
+                android:importantForAutofill="no"
                 android:inputType="number"
                 android:maxLength="3"
-                android:text="@={viewModel.weight}"
-                android:importantForAutofill="no"/>
+                android:text="@={viewModel.weight}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/weight_unit_TV"
-            android:layout_width="@dimen/unit_TV_width"
+            android:id="@+id/weightUnitTV"
+            android:layout_width="@dimen/unitWidth"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin"
             android:text="@{viewModel.bmiCalculatorType.weightDescriptionId}"
             android:textAlignment="textEnd"
-            app:layout_constraintBaseline_toBaselineOf="@+id/weight_TIL"
+            app:layout_constraintBaseline_toBaselineOf="@+id/weightTIL"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/weight_TIL"
-            tools:text="@string/metric_weight_unit"/>
+            app:layout_constraintStart_toEndOf="@+id/weightTIL"
+            tools:text="@string/metricWeightUnit" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/height_TIL"
+            android:id="@+id/heightTIL"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
-            app:layout_constraintEnd_toStartOf="@+id/height_unit_TV"
+            app:layout_constraintEnd_toStartOf="@+id/heightUnitTV"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weight_TIL">
+            app:layout_constraintTop_toBottomOf="@+id/weightTIL">
 
-            <EditText
-                android:id="@+id/height_ET"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/heightET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/height_hint"
+                android:hint="@string/heightHint"
+                android:importantForAutofill="no"
                 android:inputType="number"
                 android:maxLength="3"
-                android:text="@={viewModel.height}"
-                android:importantForAutofill="no"/>
+                android:text="@={viewModel.height}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/height_unit_TV"
-            android:layout_width="@dimen/unit_TV_width"
+            android:id="@+id/heightUnitTV"
+            android:layout_width="@dimen/unitWidth"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin"
             android:text="@{viewModel.bmiCalculatorType.heightDescriptionId}"
             android:textAlignment="textEnd"
-            app:layout_constraintBaseline_toBaselineOf="@+id/height_TIL"
+            app:layout_constraintBaseline_toBaselineOf="@+id/heightTIL"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/height_TIL"
-            tools:text="@string/metric_height_unit"/>
-
-        <Switch
-            android:id="@+id/bmi_calculator_type_switch"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/large_margin"
-            android:layout_marginEnd="@dimen/margin"
-            android:layout_marginStart="@dimen/margin"
-            android:layout_marginTop="@dimen/large_margin"
-            android:text="@string/label_switch"
-            android:checked="@={viewModel.isImperialUnits}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/height_TIL"/>
+            app:layout_constraintStart_toEndOf="@+id/heightTIL"
+            tools:text="@string/metricHeightUnit" />
 
         <TextView
-            android:id="@+id/bmi_message_TV"
+            android:id="@+id/bmiMessageTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin"
-            android:text="@string/bmi_message"
+            android:text="@string/bmiMessage"
             android:textAlignment="center"
             android:visibility="@{viewModel.isResultVisible ? View.VISIBLE : View.GONE}"
-            app:layout_constraintBottom_toTopOf="@+id/bmi_value_TV"
+            app:layout_constraintBottom_toTopOf="@+id/bmiValueTV"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/bmi_value_TV"
+            android:id="@+id/bmiValueTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin"
+            android:focusable="false"
             android:text="@{viewModel.bmiString}"
             android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/bmi_text_size"
+            android:textSize="@dimen/bmiTextSize"
             android:visibility="@{viewModel.isResultVisible ? View.VISIBLE : View.GONE}"
-            app:layout_constraintBottom_toTopOf="@+id/bmi_info_TV"
+            app:layout_constraintBottom_toTopOf="@+id/bmiInfoTV"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="31.21"/>
+            tools:text="31.21" />
 
         <TextView
-            android:id="@+id/bmi_info_TV"
+            android:id="@+id/bmiInfoTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin"
@@ -142,7 +129,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="@string/obesity"/>
+            tools:text="@string/obesity" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

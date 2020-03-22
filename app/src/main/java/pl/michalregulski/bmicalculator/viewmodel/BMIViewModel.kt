@@ -18,7 +18,8 @@ class BMIViewModel : ViewModel() {
     val isImperialUnits = ObservableBoolean(false)
 
     val bmiCalculatorType = object : NonNullObservableField<BMICalculatorType>(isImperialUnits) {
-        override fun get() = if (isImperialUnits.get()) BMICalculatorType.IMPERIAL else BMICalculatorType.METRIC
+        override fun get() =
+            if (isImperialUnits.get()) BMICalculatorType.IMPERIAL else BMICalculatorType.METRIC
     }
 
     val bmiCalculator = object : NonNullObservableField<BMICalculator>(bmiCalculatorType) {
@@ -31,18 +32,25 @@ class BMIViewModel : ViewModel() {
         override fun get() = if (bmi.get() != null) String.format("%.2f", bmi.get()) else ""
     }
 
-    val description = object : ObservableInt(bmi) {
-        override fun get(): Int {
+    val bmiStatus = object : ObservableField<BMIStatus?>(bmi) {
+        override fun get(): BMIStatus? {
             val bmi = bmi.get()
-            return if (bmi != null) getDescription(bmi).descriptionId else R.string.empty
+            return when {
+                bmi == null -> null
+                bmi >= 30.0 -> BMIStatus.OBESITY
+                bmi >= 25.0 -> BMIStatus.OVERWEIGHT
+                bmi >= 18.5 -> BMIStatus.NORMAL
+                else -> BMIStatus.UNDERWEIGHT
+            }
         }
+    }
 
-        private fun getDescription(bmi: Double): BMIStatus = when {
-            bmi >= 30.0 -> BMIStatus.OBESITY
-            bmi >= 25.0 -> BMIStatus.OVERWEIGHT
-            bmi >= 18.5 -> BMIStatus.NORMAL
-            else -> BMIStatus.UNDERWEIGHT
-        }
+    val description = object : ObservableInt(bmiStatus) {
+        override fun get(): Int = bmiStatus.get()?.descriptionId ?: R.string.empty
+    }
+
+    val color = object : ObservableInt(bmiStatus) {
+        override fun get(): Int = bmiStatus.get()?.colorId ?: R.color.colorAccent
     }
 
     val isResultVisible = object : ObservableBoolean(bmi) {
@@ -50,13 +58,19 @@ class BMIViewModel : ViewModel() {
     }
 
     val isValidWeight = object : ObservableBoolean(bmiCalculator, weight) {
-        override fun get() =
-            if (weight.get().isNotEmpty()) bmiCalculator.get().isValidWeight(weight.get().toDouble()) else false
+        override fun get() = if (weight.get().isNotEmpty()) {
+            bmiCalculator.get().isValidWeight(weight.get().toDouble())
+        } else {
+            false
+        }
     }
 
     val isValidHeight = object : ObservableBoolean(bmiCalculator, height) {
-        override fun get() =
-            if (height.get().isNotEmpty()) bmiCalculator.get().isValidHeight(height.get().toDouble()) else false
+        override fun get() = if (height.get().isNotEmpty()) {
+            bmiCalculator.get().isValidHeight(height.get().toDouble())
+        } else {
+            false
+        }
     }
 
 }
