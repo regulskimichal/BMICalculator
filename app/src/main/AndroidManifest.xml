@@ -15,8 +15,7 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".view.BMIDetailsActivity"
-            android:label="@string/title_activity_bmi_details"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/title_activity_bmi_details" />
         <activity android:name=".view.BMIActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
